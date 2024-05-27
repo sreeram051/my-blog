@@ -4,7 +4,11 @@ import { client, urlFor } from "./lib/sanity";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
- 
+
+
+
+
+
 export const revalidate = 30;
 
 
@@ -31,7 +35,7 @@ export default async function Home() {
    <div className="grid grid-cols-1 md:grid-cols-2 mt-5 gap-5 mb-8" >
     {data.map((post , idx) => (
       <Card key={idx}>
-        <Image src={urlFor(post.image).url()}
+        <Image src={urlFor(post.image).url() }
          alt="image"
          width={500} 
          height={500}
